@@ -1,0 +1,14 @@
+
+server:
+  port: 9000
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: -----BEGIN PUBLIC KEY-----
+                             MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrFZtP4GYt820lpGyANB4Fr6hj
+                             2xnYyxNMBgh0kaa6fvaplBYmELo/2Zvn6W6Ryw7DaaGq/kJEoS3gBIYw4KLeANOV
+                             bk3nvIGiDGuNQjfRoslUoVcU04f/Z7YOcZecUwXM2ZgssPyZjr0Qu37gydcjrQzt
+                             4CsQRYgvUnAmOUMukQIDAQAB
+                             -----END PUBLIC KEY-----

@@ -37,17 +37,16 @@ public class OauthConfiguration extends AuthorizationServerConfigurerAdapter {
     @Qualifier("authenticationManagerBean")
     AuthenticationManager authorizationManager;
 
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security
-                .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated");
-    }
+//    @Override
+//    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+//        security
+//                .tokenKeyAccess("permitAll()")
+//                .checkTokenAccess("isAuthenticated");
+//    }
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients
-                .inMemory().withClient(clientId)
+        clients .inMemory().withClient(clientId)
                 .secret(passwordEncoder.encode(clientSecret))
                 .authorizedGrantTypes("refresh_token", "password")
                 .scopes("read", "write")

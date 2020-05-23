@@ -11,6 +11,8 @@ import java.util.Map;
 
 @Component
 public class JWTConverter extends DefaultAccessTokenConverter implements JwtAccessTokenConverterConfigurer {
+
+
     @Override
     public void configure(JwtAccessTokenConverter jwtAccessTokenConverter) {
         jwtAccessTokenConverter.setAccessTokenConverter(this);
